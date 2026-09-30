@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Task Status</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen p-10">
+    <div class="max-w-2xl mx-auto">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold">Task Statuses</h1>
+
+        <button
+          id="show-form"
+          class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+        >
+          + Add Status
+        </button>
+      </div>
+
+      <!-- Form hidden at first -->
+      <form
+        id="form"
+        class="hidden bg-white p-6 rounded-xl shadow-md space-y-4 mb-6"
+      >
+        <div>
+          <label class="block text-sm font-medium mb-1"> Name </label>
+
+          <input
+            id="name"
+            type="text"
+            placeholder="e.g. In Progress"
+            class="w-full border rounded-lg px-3 py-2"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1"> Description </label>
+
+          <input
+            id="description"
+            type="text"
+            placeholder="Enter description"
+            class="w-full border rounded-lg px-3 py-2"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="bg-green-600 text-white px-4 py-2 rounded-lg"
+        >
+          Add
+        </button>
+      </form>
+
+      <!-- Existing statuses -->
+      <ul id="list" class="space-y-3"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

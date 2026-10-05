@@ -8,7 +8,7 @@ showForm.addEventListener("click", () => {
 });
 
 // Show data.json
-fetch("backend/api.php")
+fetch("../backend/api.php")
   .then((response) => response.json())
   .then((statuses) => {
     statuses.forEach((status) => {
@@ -27,7 +27,7 @@ fetch("backend/api.php")
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  fetch("backend/api.php", {
+  fetch("../backend/api.php", {
     method: "POST",
 
     headers: {

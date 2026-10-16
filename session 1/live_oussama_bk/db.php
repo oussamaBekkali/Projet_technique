@@ -1,0 +1,12 @@
+<?php
+$host = "localhost";
+$user = "root";
+$dbname = "softproject";
+$psw = "oussama2006";
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $psw);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}

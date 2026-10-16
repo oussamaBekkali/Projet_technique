@@ -1,0 +1,18 @@
+Interface,Name,Signification,Type,Obligatoire,Calcule
+Developer,id_developer,Unique identifier of the developer,INT,oui,non
+Developer,first_name,First name of the developer,VARCHAR,oui,non
+Developer,last_name,Last name of the developer,VARCHAR,oui,non
+Developer,email,Email address of the developer,VARCHAR,oui,non
+Developer,specialization,Developer's area of specialization,VARCHAR,oui,non
+Developer,date_joined,Date the developer joined the project,DATE,oui,non
+Task,id_task,Unique identifier of the task,INT,oui,non
+Task,title,Title of the task,VARCHAR,oui,non
+Task,description,Detailed description of the task,TEXT,oui,non
+Task,priority,Priority level of the task,ENUM,oui,non
+Task,date_created,Date the task was created,DATETIME,oui,non
+Task,deadline,Deadline for completing the task,DATE,oui,non
+Task,id_developer,Identifier of the developer assigned to the task,INT,oui,non
+Task,id_status,Identifier of the task's current status,INT,oui,non
+TaskStatus,id_status,Unique identifier of the status,INT,oui,non
+TaskStatus,name,Name of the status,VARCHAR,oui,non
+TaskStatus,description,Description of the status,VARCHAR,non,non

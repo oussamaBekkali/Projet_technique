@@ -1,0 +1,5 @@
+TaskStatusService class :
+1 getAll() to get data from TaskStatusDAO then loop through it to turn it to an assiotive arr 
+2 add () get the inputs then store them in a variable 
+3 check if the $input is an arr and there is an name and description key in it and check if that key value is an string. if not throw new invalidArgumentException 
+4 add the new task status using DAO add() then return a message. 

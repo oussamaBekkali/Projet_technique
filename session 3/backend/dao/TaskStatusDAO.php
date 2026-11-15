@@ -10,12 +10,12 @@ class TaskStatusDAO
     {
         $taskStatuses = [];
 
-        $content = @file_get_contents($this->file);
+        $content = file_get_contents($this->file);
         if ($content === false) {
             throw new RuntimeException("Unable to read TaskStatus data.");
         }
 
-        $data = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+        $data = json_decode($content, true, JSON_THROW_ON_ERROR);
         if (!is_array($data)) {
             throw new RuntimeException("TaskStatus data is invalid.");
         }
@@ -37,12 +37,12 @@ class TaskStatusDAO
             throw new InvalidArgumentException("Name and description are required.");
         }
 
-        $content = @file_get_contents($this->file);
+        $content = file_get_contents($this->file);
         if ($content === false) {
             throw new RuntimeException("Unable to read TaskStatus data.");
         }
 
-        $data = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+        $data = json_decode($content, true, JSON_THROW_ON_ERROR);
         if (!is_array($data)) {
             throw new RuntimeException("TaskStatus data is invalid.");
         }
@@ -60,7 +60,7 @@ class TaskStatusDAO
         ];
 
         $json = json_encode($data, JSON_PRETTY_PRINT | JSON_THROW_ON_ERROR);
-        if (@file_put_contents($this->file, $json, LOCK_EX) === false) {
+        if (file_put_contents($this->file, $json, LOCK_EX) === false) {
             throw new RuntimeException("Unable to save TaskStatus data.");
         }
     }

@@ -4,7 +4,7 @@ const btnAjouter = document.getElementById("btn-show-form");
 const btnAnnuler = document.getElementById("btn-cancel-form");
 const tbody = document.getElementById("table-ts-body");
 const btnEnregister = document.getElementById("enregister");
-const api = "http://localhost:8000/backend/api/api.php";
+const api = "/../backend/api/api.php";
 
 function Loading(isloading) {
   if (isloading) {

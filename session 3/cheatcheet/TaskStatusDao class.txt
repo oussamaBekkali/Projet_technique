@@ -1,0 +1,14 @@
+TaskStatusDao class get the content from json using findALL().
+
+findAll() 1 check the file if false throw new RuntimeException()
+2 check if retrived data is not an arr and throw // //
+3 then loop throgh data and store in an arr as an objs using TaskStatus class
+4 finally return the arr 
+
+add a new TaskStatus using function called add(2 @params)
+1 same as setup as findAll()
+2 same
+3 calc the id start with 0 loop through data retrived then compare using max () 
+4 store the new TaskStatus in a variable using the class then add it to data variable 
+5 in a variable called json store the result of json_encode() give it flags json pretty print or json throw on error
+6 chack the result of file put content if false throw new Runtime Exception() use LOCK_EX to prevent multiple writing process

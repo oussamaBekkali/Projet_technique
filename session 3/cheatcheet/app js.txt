@@ -1,0 +1,24 @@
+app.js 
+
+get the element from html 
+
+loading() to change button txt
+
+Toast(message, type = "success) 
+1 get the container then create div element
+2 set the color 
+3 set toast.className
+4 set toast.textcontent
+5 append toast
+6 setTimout() first one to change the opacity to 0 the seconde one to remove the toast using .remove()
+
+list () fetch api then chack response if not ok throw an error else convert to json then get the data 
+1 empty tbody and loop through data and create html 
+2 catch error in the console and toast
+
+fetch api with a body then wait for the response using async save json in a variable 
+1 check response throw error if not ok
+2 then fill toast with respons.message , reset the form , call list()
+3 catch error fill toast with it and show it in the cnosole
+4 finally set button text to default
+

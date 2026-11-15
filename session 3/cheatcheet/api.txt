@@ -1,0 +1,7 @@
+api.php
+
+1 try if method get or post if post set http response code to 201 
+2 if neither set response code to 405 and give it the allowed methodes using header("Allow: GET, POST") then send a message saying the methode isn't allowed 
+3 send the response using json encode give it THROW on error flag 
+4 catch invalidargument and set the response code to 400 with an arr that has the exception message 
+5 catch throwable write the message in error log then set response code to 500 and send ann arr with message to the user 
